@@ -7,4 +7,9 @@ type Post {
 
 type Query {
     getPost: Post!
+    getPostById(authorId: String) : Post
+}
+
+type Mutation {
+    savePost(title: String!, category: String!, authorId: String!) : Post
 }
